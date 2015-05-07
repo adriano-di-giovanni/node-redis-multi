@@ -1,6 +1,6 @@
 {
   "name": "node-redis-multi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Node.js library to augment node_redis interface with an enhanced version of MULTI command",
   "main": "lib/multi.js",
   "scripts": {

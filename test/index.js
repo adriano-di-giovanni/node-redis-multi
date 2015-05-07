@@ -9,7 +9,7 @@ global.expect = chai.expect;
 var
   redis = require('redis');
 
-require('../lib/multi')(redis);
+require('../lib/multi')(redis, true);
 
 describe('Unit tests', function () {
 
@@ -29,6 +29,7 @@ describe('Unit tests', function () {
       .set('a', 1)
       .get('a')
       .exec(function (error, response) {
+        console.log(response);
         expect(response.get('a')).to.equal('1');
         expect(response.at(0)).to.equal('OK');
         expect(response.at(1)).to.equal(response.get('a'));
